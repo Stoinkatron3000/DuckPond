@@ -9,7 +9,7 @@ public class Pond extends Observable implements Observer {
     public Pond(){
         breadList = new LinkedList<>();
         duckNumber = 0; // milliseconds
-        ducks = new ArrayList(); // all the ducks
+        ducks = new ArrayList<>(); // all the ducks
         for(int i=0; i<4;i++){
             ducks.add(new Duck(duckNumber++));
         }

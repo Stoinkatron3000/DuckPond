@@ -6,8 +6,8 @@ public class Duck implements Observer {
     private Hunger hunger;
     private Timer timer;
     private int xCoord,yCoord,speed;
-    private int hungerTime;
-    private int hungerLevelWillEat = 3;
+    private int hungerTime; // time for ticks between hungerticks
+    private int hungerLevelWillEat = 3; // hunger level duck will start eating
 
     /**
      * creates a Duck
@@ -51,7 +51,7 @@ public class Duck implements Observer {
     }
 
     private boolean hungry(){
-        if(hunger.getHunger() > hungerLevelWillEat)
+        if(hunger.getHunger() >= hungerLevelWillEat)
             return true;
         return false;
     }

@@ -11,7 +11,7 @@ public class Hunger extends TimerTask {
     // runs
     public void run(){
         if (hunger > 0)
-            System.out.println("Duck No " + duckNumber + ", Hunger level:"+ ++hunger);
+            System.out.println("Duck No " + duckNumber + ", Hunger level:" + ++hunger);
         else
             hunger++;
     }
@@ -28,6 +28,10 @@ public class Hunger extends TimerTask {
     /**
      * decrease hunger by 10
      */
-    public void decreaseHunger(){ hunger = hunger - 10;
+    public void decreaseHunger(){
+        if (hunger < 10)
+            hunger = 0;
+        else
+            hunger = hunger - 10;
     }
 }

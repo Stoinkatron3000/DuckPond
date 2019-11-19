@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Bread {
      private int x = 0, y = 0;
 
@@ -9,5 +11,12 @@ public class Bread {
     public void moveBread(int xCoord, int yCoord){
          x = xCoord;
          y = yCoord;
+    }
+
+    public HashMap getBreadCoords() {
+        HashMap coords = new HashMap();
+        coords.put("x",x);
+        coords.put("y",y);
+        return coords;
     }
 }
